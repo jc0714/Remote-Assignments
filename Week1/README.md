@@ -1,3 +1,34 @@
+##Part1 : Git & GitHub
+1. **Done**
+2. Meaning and use case
+    a. git status
+    b. git diff
+    c. git add
+    d. git reset
+    e. git commit
+    f. git log
+    g. git branch
+    h. git merge
+    i. git push [ repo_name ] [ branch_name ]
+    j. git remote
+    k. fork
+    l. (Advanced) git rebase
+    m. (Advanced) git cherry-pick
+    n. (Advanced) git reflog
+    o. (Advanced) git tag
+3. 
+    1. 在 GitHub 開一個 repo
+    2. 在 terminal 打 `git clone` [`https://github.com/jc0714/amazingOne.git`](https://github.com/jc0714/amazingOne.git)
+    3. `cd` amazingOne：走進資料夾
+    4. `git log`：關心檔案的狀況
+        1. `git log -p` ：更詳細
+    5. `vim` 文件名稱：把他叫出來看看他，可以編輯
+        1. 進來之後，按 `i` 可以進入 insert mode.
+        2. insert 完畢，按 `esc` 
+        3. 打 `:wq` ，就可以順利退出啦
+    6. `git add .` ：先放到暫存區（攝影棚），準備 commit 
+    7. `git commit -m` ”你做了什麼的筆記”：（拍張照！）terminal 會出現你做了幾個改變
+    8. `git push` ：把他推到 gitHub 上面去
 ##Part2
 1. 用 let 建立 constant，給值以後不能更改，不然會出線錯物，較為嚴格。用 var 建立變數，數值會變來變去時適合使用。
 2. var pi : Float = 3.14159 
@@ -24,3 +55,4 @@ let averageScore = 86.8`
 9. var salary : Int =22000
 salary += 28000
 10. 等於可以用 == 表示
+
