@@ -1,6 +1,7 @@
 ##Part1 : Git & GitHub
 1. **Done**
 2. Meaning and use case
+
     a. **git status：**查看目前工作目錄和暫存區的狀態
     - **使用時機**: 用於檢查哪些文件已經被修改但未提交，哪些文件已經被暫存。
 
