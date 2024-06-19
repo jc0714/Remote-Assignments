@@ -1,21 +1,40 @@
 ##Part1 : Git & GitHub
 1. **Done**
 2. Meaning and use case
-    a. git status
-    b. git diff
-    c. git add
-    d. git reset
-    e. git commit
-    f. git log
-    g. git branch
-    h. git merge
-    i. git push [ repo_name ] [ branch_name ]
-    j. git remote
-    k. fork
-    l. (Advanced) git rebase
-    m. (Advanced) git cherry-pick
-    n. (Advanced) git reflog
-    o. (Advanced) git tag
+    a. **git status：**查看目前工作目錄和暫存區的狀態
+    - **使用時機**: 用於檢查哪些文件已經被修改但未提交，哪些文件已經被暫存。
+
+    b. **git diff：**呈現未儲存內容和已儲存內容的差異
+    - **使用時機**: 看尚未 push 的變動。
+    
+    c. **git add：放到** staging area
+    - **使用時機**: push 前的動作。
+
+    d. **git reset：**Reset the staging area and working directory states
+    - **使用時機**: 用於撤銷已經暫存的更改或回退到某個特定的提交版本。
+
+    e. **git commit：**Commit the staged changes to the local repository
+    - **使用時機**: 要儲存到暫存區。
+
+    f. **git log：**顯示歷史記錄。
+    - git log --oneline -n，`git log --oneline -3` 可以看到近三次的編輯紀錄
+    - **使用時機**: 想看歷史動作。
+
+    g. **git branch：**列出 ****branches
+    - **使用時機**: 用於管理分支，查看當前分支列表或創建新分支。
+
+    h. **git merge：**合併 branches
+    - **使用時機**: ？
+
+    i. **git push [repo_name] [branch_name]：推到 GitHub 上面。**
+    - **使用時機**: 將電腦裡的內容同步到 GitHub 上。
+    
+    j. **git remote：**Manage remote repositories
+    - **使用時機**: ？
+
+    k. **fork：**從別人的 GitHub repository 中複製一份到自己的 repository
+    - **使用時機**: 想要用別人的檔案時。
+    
 3. 
     1. 在 GitHub 開一個 repo
     2. 在 terminal 打 `git clone` [`https://github.com/jc0714/amazingOne.git`](https://github.com/jc0714/amazingOne.git)
@@ -29,7 +48,9 @@
     6. `git add .` ：先放到暫存區（攝影棚），準備 commit 
     7. `git commit -m` ”你做了什麼的筆記”：（拍張照！）terminal 會出現你做了幾個改變
     8. `git push` ：把他推到 gitHub 上面去
+    
 ##Part2
+
 1. 用 let 建立 constant，給值以後不能更改，不然會出線錯物，較為嚴格。用 var 建立變數，數值會變來變去時適合使用。
 2. var pi : Float = 3.14159 
 3. let x : Int = 8
@@ -56,3 +77,13 @@ let averageScore = 86.8`
 salary += 28000
 10. 等於可以用 == 表示
 
+##Part3
+var myFriends : Array<String> = []
+myFriends += ["Ian", "Bomi" ,"Kevin"]
+
+myFriends.append("Michael")
+print(myFriends)
+
+myFriends.insert("Kevin", at:0)
+
+myFriends.removeAtIndex(3)
