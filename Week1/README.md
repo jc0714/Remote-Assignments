@@ -1,4 +1,4 @@
-//:Part1 : Git & GitHub
+Part1 : Git & GitHub
 1. **Done**
 2. Meaning and use case
 
@@ -79,12 +79,39 @@ salary += 28000
 10. 等於可以用 == 表示
 
 ##Part3
+//1
 var myFriends: [String] = []
+
+//2
 myFriends += ["Ian", "Bomi", "Kevin"]
 
+//3
 myFriends.append("Michael")
 print(myFriends)
 
+//4
 myFriends.insert("Kevin", at: 0)
-
 myFriends.remove(at: 3)
+print(myFriends)
+
+//5
+for friend in myFriends {
+    print(friend)
+}
+
+//6
+if myFriends.count > 4 {
+    print(myFriends[4])
+} else {
+    print("Index out of range")
+}
+
+//7
+myFriends.first
+
+//8
+myFriends.last
+
+//9
+
+
