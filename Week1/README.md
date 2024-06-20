@@ -1,8 +1,8 @@
-##Part1 : Git & GitHub
+//:Part1 : Git & GitHub
 1. **Done**
 2. Meaning and use case
 
-    a. **git status：**查看目前工作目錄和暫存區的狀態
+    a. ** git status： **查看目前工作目錄和暫存區的狀態
     - **使用時機**: 用於檢查哪些文件已經被修改但未提交，哪些文件已經被暫存。
 
     b. **git diff：**呈現未儲存內容和已儲存內容的差異
@@ -21,7 +21,7 @@
     - git log --oneline -n，`git log --oneline -3` 可以看到近三次的編輯紀錄
     - **使用時機**: 想看歷史動作。
 
-    g. **git branch：**列出 ****branches
+    g. **git branch：**列出 ** ** branches
     - **使用時機**: 用於管理分支，查看當前分支列表或創建新分支。
 
     h. **git merge：**合併 branches
@@ -79,12 +79,12 @@ salary += 28000
 10. 等於可以用 == 表示
 
 ##Part3
-var myFriends : Array<String> = []
-myFriends += ["Ian", "Bomi" ,"Kevin"]
+var myFriends: [String] = []
+myFriends += ["Ian", "Bomi", "Kevin"]
 
 myFriends.append("Michael")
 print(myFriends)
 
-myFriends.insert("Kevin", at:0)
+myFriends.insert("Kevin", at: 0)
 
-myFriends.removeAtIndex(3)
+myFriends.remove(at: 3)
