@@ -139,7 +139,7 @@ myCountryNumber["GB"] = 0
 print(myCountryNumber)
 
 //12
-myCountryNumber.isEmpty
+var emptyDictionary : [Int: String] = [:]
 
 //13
 myCountryNumber.removeValue(forKey: "GB")
@@ -248,8 +248,7 @@ whoAreYou_switch(jobLevel: 5)
 //: # Part 5
 //: 1. 分別是字串和浮點數
 //2
-func multiply(a : Int){
-    let b = 10
+func multiply(a : Int , b : Int = 10 ){
     print( a * b )
 }
 multiply(a: 7)
