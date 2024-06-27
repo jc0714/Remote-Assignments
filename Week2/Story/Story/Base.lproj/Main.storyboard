@@ -15,9 +15,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6N-C1-7gy">
-                                <rect key="frame" x="46" y="622" width="300" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus." lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOB-K8-nZu">
+                                <rect key="frame" x="40" y="291.33333333333331" width="313" height="71.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did you know?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNT-dZ-ll2">
+                                <rect key="frame" x="40" y="159" width="170" height="32.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6N-C1-7gy">
+                                <rect key="frame" x="40" y="733" width="313" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Show another Fun Fact">
                                     <backgroundConfiguration key="background">
@@ -30,29 +41,23 @@
                                     <action selector="showFunFact:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W1X-qE-zoT"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus." lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOB-K8-nZu">
-                                <rect key="frame" x="65" y="259" width="245" height="223"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Did you know?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNT-dZ-ll2">
-                                <rect key="frame" x="65" y="195" width="214" height="56"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.73474896266927381" green="0.86078912019729614" blue="0.76177526886302038" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="UNT-dZ-ll2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="fXp-Ci-GMh"/>
-                            <constraint firstItem="UNT-dZ-ll2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="uQx-Dr-Cx1"/>
+                            <constraint firstItem="b6N-C1-7gy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="0cj-ES-93R"/>
+                            <constraint firstItem="UNT-dZ-ll2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="1Te-Sz-3y5"/>
+                            <constraint firstItem="UNT-dZ-ll2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="8QG-hg-Dq4"/>
+                            <constraint firstItem="hOB-K8-nZu" firstAttribute="top" secondItem="UNT-dZ-ll2" secondAttribute="bottom" constant="100" id="Aaq-ia-1cA"/>
+                            <constraint firstItem="hOB-K8-nZu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="BxX-f6-Zdd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="b6N-C1-7gy" secondAttribute="bottom" constant="50" id="Ff3-fn-UaQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b6N-C1-7gy" secondAttribute="trailing" constant="40" id="bAl-iq-mEO"/>
+                            <constraint firstAttribute="trailing" secondItem="hOB-K8-nZu" secondAttribute="trailing" constant="40" id="nZg-Sj-SyE"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="funFactLabel" destination="hOB-K8-nZu" id="wAY-03-mNd"/>
+                        <outlet property="showButton" destination="b6N-C1-7gy" id="jlH-cT-vCk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
