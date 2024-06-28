@@ -107,6 +107,9 @@ SomeClass.someTypeMethod() // 呼叫 class
     self.count += 1
 } */
 // self.count 會被視為 self 的屬性。
+
+// ##參考資料：https://itisjoe.gitbooks.io/swiftgo/content/ch2/protocols.html
+
 //: # Part2
 /*There are several gasoline types, 92, 95, 98, and diesel that we can use enum to model them.
  ● Please declare an enum named Gasoline to model gasoline.
