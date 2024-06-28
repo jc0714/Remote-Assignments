@@ -100,13 +100,32 @@ class SomeClass {
         print("Hi, I'm type method.")
     }
 }
-SomeClass.someTypeMethod() // 呼叫 class
+SomeClass.someTypeMethod() // 不用先創造一個 instance，就可以直接呼叫。這個 method 屬於這個 class。
 //:8. What does self mean in an instance method and a type method respectively?
-// 可以在 func 裡呼叫 instance 本人。若寫為：
-/* func increment() {
-    self.count += 1
-} */
-// self.count 會被視為 self 的屬性。
+// instance method，用 self 在 func 裡呼叫 instance 本人。若寫為：
+class Counter_1 {
+    var count = 0
+    
+    func increment() {
+        self.count += 10
+        print(count)
+    }
+}
+let c = Counter_1()
+c.increment()
+// self.count 會被視為 instance 的屬性。
+
+// type method
+class Counter_2 {
+    static var count: Int = 0
+    
+    static func increment() {
+        self.count += 1
+        print("Value is now \(self.count).")
+    }
+}
+Counter_2.increment()
+// self.count 會被視為 class 的屬性。
 
 // ##參考資料：https://itisjoe.gitbooks.io/swiftgo/content/ch2/protocols.html
 
@@ -216,13 +235,14 @@ if let pet = Ian.pet{
 //1
 struct Person {
     var name: String
+    var toolMan : ToolMan
 }
 protocol PoliceMan {
     func arrestCriminals() //no argument
 }
 //2
 extension Person: PoliceMan {
-    func arrestCriminals() {
+    func arrestCriminals() { //follow PoliceMan protocol
         print("\(name) is arresting criminals.")
     }
 }
@@ -230,22 +250,17 @@ extension Person: PoliceMan {
 protocol ToolMan {
     func fixComputer()
 }
-//4
-extension Person: ToolMan {
-    func fixComputer() {
-        print("\(name) is fixing the computer.")
-    }
-}
-//5 不太知道這題在幹嘛
-struct Engineer: ToolMan {
+//4 已經加在第一題
+//5 用這個 struct 建立一個 ToolMan 屬性的 instance
+struct Engineer: ToolMan { //follow ToolMan protocol
     func fixComputer() {
         print("Engineer is fixing the computer.")
     }
 }
 //6
-let steven = Person(name: "Steven")
+let steven = Person(name: "Steven", toolMan: Engineer())
 steven.arrestCriminals()
-steven.fixComputer()
+steven.toolMan.fixComputer()
 //: # Part 4
 //1
 enum GuessNumberGameError : Error{
