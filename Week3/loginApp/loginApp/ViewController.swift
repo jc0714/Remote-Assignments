@@ -17,7 +17,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // set segmentedControl color
         segmentedControl.backgroundColor = UIColor.systemGray
+        
+        // the default page is log in page, so put on the default set
         checkTextField.isEnabled = false
         checkText.textColor = UIColor.lightGray
         checkTextField.backgroundColor = UIColor.black
@@ -34,23 +38,24 @@ class ViewController: UIViewController {
             accountTextField.text = ""
             passwordTextField.text = ""
         case 1:
-                // sign up page
-                checkTextField.isEnabled = true
-                checkText.textColor = UIColor.black
-                checkTextField.backgroundColor = UIColor.white
-                accountTextField.text = ""
-                passwordTextField.text = ""
-                checkTextField.text = ""
+            // sign up page
+            checkTextField.isEnabled = true
+            checkText.textColor = UIColor.black
+            checkTextField.backgroundColor = UIColor.white
+            accountTextField.text = ""
+            passwordTextField.text = ""
+            checkTextField.text = ""
         default:
             return
         }
     }
     @IBAction func checkLogIn(_ sender: UIButton) {
+         // alert
          func showAlert(title: String, message: String) {
-         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-         let action = UIAlertAction(title: "OK", style: .default)
-         alert.addAction(action)
-         present(alert, animated: true, completion: nil)
+             let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+             let action = UIAlertAction(title: "OK", style: .default)
+             alert.addAction(action)
+             present(alert, animated: true, completion: nil)
          }
          
          guard let account = accountTextField.text, let password = passwordTextField.text else {
@@ -64,7 +69,8 @@ class ViewController: UIViewController {
                     showAlert(title: "Attention!", message: "Account can't be empty!")
                 }else if password.isEmpty {
                     showAlert(title: "Attention!", message: "Password can't be empty!")
-                }else if account == "appworks_school" && password == "1234" {
+                }// only accepted account and password
+                else if account == "appworks_school" && password == "1234" {
                     showAlert(title: "Good", message: "Log in successful!")
                 }else {
                     showAlert(title: "So sad", message: "Log in failed!")
@@ -89,6 +95,7 @@ class ViewController: UIViewController {
         }
         
         /*
+         把以下內容用 case 呈現
          @IBAction func checkLogIn(_ sender: UIButton) {
          if accountTextField.text?.isEmpty == false && passwordTextField.text?.isEmpty == false{
          let title : String = "So sad"
@@ -105,25 +112,5 @@ class ViewController: UIViewController {
          let action = UIAlertAction(title: "OK", style: .default)
          alert.addAction(action)
          present(alert, animated: true, completion: nil)}
-         
-         else if accountTextField.text == ""{
-         let title : String = "Attention!"
-         let message : String = "Account can't be empty!"
-         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-         let action = UIAlertAction(title: "OK", style: .default)
-         alert.addAction(action)
-         present(alert, animated: true, completion: nil)}
-         
-         else if passwordTextField.text == ""{
-         let title : String = "Attention!"
-         let message : String = "Password can't be empty!"
-         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-         let action = UIAlertAction(title: "OK", style: .default)
-         alert.addAction(action)
-         present(alert, animated: true, completion: nil)}
-         }
-         }
-         
          */
     }
-
