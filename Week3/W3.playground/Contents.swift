@@ -15,7 +15,7 @@ greet("Joy")
 
 //: 2 . Please declare a closure whose input type is Int, output type is Bool. The functionality of this closure is to verify if the input is odd or not. Return true if it’s odd and vice versa.
 var oddornot = {(num: Int)-> () in
-    (num%2) == 0 ? print("even number"):print("odd number")
+    (num%2) == 0 ? print("even number"):print("odd number10")
 }
     
 oddornot(6)

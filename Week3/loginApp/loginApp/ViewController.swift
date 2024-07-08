@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         
         // the default page is log in page, so put on the default set
         checkTextField.isEnabled = false
-        checkText.textColor = UIColor.lightGray
+        checkText.textColor = UIColor.lightGray // make "check" invisible
         checkTextField.backgroundColor = UIColor.black
     }
     
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         switch sender.selectedSegmentIndex {
         case 0 :
             // Log in page
-            checkTextField.isEnabled = false
+            checkTextField.isEnabled = false // unfuction the text field
             checkText.textColor = UIColor.lightGray
             checkTextField.backgroundColor = UIColor.black
             accountTextField.text = ""
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
         case 1:
             // sign up page
             checkTextField.isEnabled = true
-            checkText.textColor = UIColor.black
+            checkText.textColor = UIColor.black // make "check" visible
             checkTextField.backgroundColor = UIColor.white
             accountTextField.text = ""
             passwordTextField.text = ""
@@ -49,19 +49,20 @@ class ViewController: UIViewController {
             return
         }
     }
+    // alert
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    
     @IBAction func checkLogIn(_ sender: UIButton) {
-         // alert
-         func showAlert(title: String, message: String) {
-             let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-             let action = UIAlertAction(title: "OK", style: .default)
-             alert.addAction(action)
-             present(alert, animated: true, completion: nil)
-         }
-         
-         guard let account = accountTextField.text, let password = passwordTextField.text else {
-         return
-         }
-         
+        guard let account = accountTextField.text, let password = passwordTextField.text else {
+        return
+        }
+        
         switch segmentedControl.selectedSegmentIndex {
             case 0:
                 // Log in page
