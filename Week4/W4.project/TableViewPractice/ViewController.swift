@@ -13,8 +13,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        table.dataSource = self
-        table.delegate = self
+        tableView.dataSource = self
+        tableView.delegate = self
     }
     
     // return 2 sections
