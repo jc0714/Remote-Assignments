@@ -15,18 +15,18 @@ struct Station: Codable {
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var StationID: UILabel!
-    @IBOutlet weak var StationName: UILabel!
-    @IBOutlet weak var AdressLabel: UILabel!
+    @IBOutlet weak var stationIDLabel: UILabel!
+    @IBOutlet weak var stationNameLabel: UILabel!
+    @IBOutlet weak var adressLabel: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         displayText()
         view.backgroundColor = UIColor.systemOrange
-        StationID.textColor = .white
-        StationName.textColor = .white
-        AdressLabel.textColor = .white
+        stationIDLabel.textColor = .white
+        stationNameLabel.textColor = .white
+        adressLabel.textColor = .white
     }
     
     func displayText() {
@@ -61,9 +61,9 @@ class ViewController: UIViewController {
         do {
             let station = try JSONDecoder().decode(Station.self, from: data)
             DispatchQueue.main.async {
-                self.StationID.text = station.stationID
-                self.StationName.text = station.stationName
-                self.AdressLabel.text = station.stationAddress
+                self.stationIDLabel.text = station.stationID
+                self.stationNameLabel.text = station.stationName
+                self.adressLabel.text = station.stationAddress
                 }
             } catch {
                 print("Error")

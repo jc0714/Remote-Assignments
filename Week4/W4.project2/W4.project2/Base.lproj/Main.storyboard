@@ -47,9 +47,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="AdressLabel" destination="D9g-Xx-bCk" id="cjh-X8-l73"/>
-                        <outlet property="StationID" destination="0TF-ym-kNP" id="dEr-Ts-Xcf"/>
-                        <outlet property="StationName" destination="2pg-E4-Eoo" id="r65-ol-RFc"/>
+                        <outlet property="adressLabel" destination="D9g-Xx-bCk" id="cjh-X8-l73"/>
+                        <outlet property="stationIDLabel" destination="0TF-ym-kNP" id="dEr-Ts-Xcf"/>
+                        <outlet property="stationNameLabel" destination="2pg-E4-Eoo" id="r65-ol-RFc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
